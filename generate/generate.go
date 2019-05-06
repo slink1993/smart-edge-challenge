@@ -59,7 +59,8 @@ func GenerateSignature(reader io.Reader, privateKey *rsa.PrivateKey, input strin
 	return base64.StdEncoding.EncodeToString(signature)
 }
 
-// Takes in a filename, the directory of where to write the file, and the desired contents to be written.
+// Takes in a filename, the directory of where to write the file,
+// and the desired contents to be written.
 // Writes a given string to a file on the filesystem.
 func WriteToFile(fileName, contents, dir string) {
 	file, err := os.Create(filepath.Join(dir, filepath.Base(fileName)))
@@ -68,7 +69,8 @@ func WriteToFile(fileName, contents, dir string) {
 	file.Write([]byte(contents))
 }
 
-// Takes in a filename, the directory of where to write the file, then reads a file from the filesystem.
+// Takes in a filename, the directory of where to write the file,
+// and then reads a file from the filesystem.
 // Returns a string of the contents of the file.
 func ReadFile(fileName, dir string) string {
 	fileContents, _ := ioutil.ReadFile(filepath.Join(dir, filepath.Base(fileName)))
@@ -102,7 +104,8 @@ func IsValidInputLength(input string) bool {
 	return true
 }
 
-// Takes the input given from command line execution, along with the directory to save the files.
+// Takes the input given from command line execution,
+// along with the directory to save the files.
 // Writes a private rsa key, public rsa key, and cryptographic signature to file.
 func GenerateNewKeys(input, dir string) (string, string) {
 	reader := rand.Reader
@@ -125,8 +128,8 @@ func GenerateNewKeys(input, dir string) (string, string) {
 	return signature, encodedPublicKey
 }
 
-// Takes in error type, and if error is not nil,
-// prints details of error and exits program
+// Takes in error type, and if an error has occurred,
+// it then prints details of error and exits program
 func checkError(err error) {
 	if err != nil {
 		log.Println("An error has occurred: ", err.Error())

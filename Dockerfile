@@ -4,7 +4,11 @@ RUN mkdir -p ${GOPATH}/src/codechal
 
 WORKDIR ${GOPATH}/src/codechal
 
-COPY . ./
+COPY generate ./generate
+
+COPY keys ./keys
+
+COPY app.go ./
 
 RUN go build app.go
 

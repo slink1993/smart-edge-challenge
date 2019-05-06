@@ -4,8 +4,10 @@ RUN mkdir -p ${GOPATH}/src/codechal
 
 WORKDIR ${GOPATH}/src/codechal
 
-COPY . ./
+COPY generate ./generate
 
-WORKDIR ${GOPATH}/src/codechal/test
+COPY test/Dockerfile test/generate_test.go ./test/
 
-ENTRYPOINT ["go", "test", "-v"]
+COPY app.go ./
+
+ENTRYPOINT ["go", "test", "./test", "-v"]

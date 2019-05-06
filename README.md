@@ -24,7 +24,7 @@
 
 ### CI/CD (CircleCI):
 
-The fastest way to trigger testing via CI/CD is to fork this repository, then connect it to your personal CircleCI account. You may also clone this repository then push it your personal github. It will also need to be connected to your personal github. 
+The fastest way to trigger testing via CI/CD is to fork this repository, then connect it to your CircleCI account. You may also clone this repository and then push it your own github. Again, it will need to be connected to your CircleCI account. 
 
 To trigger a build, you can do a `git commit`. 
 If there are no changes to commit, you may use the command:
