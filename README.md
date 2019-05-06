@@ -20,11 +20,13 @@
 
 #### On Local Machine:
 
-1. `cd test && go test -v`
+1. `go test ./test -v`
 
 ### CI/CD (CircleCI):
 
-After cloning/forking this repository, connect it to your personal CircleCI account.
+The fastest way to trigger testing via CI/CD is to fork this repository, then connect it to your personal CircleCI account. You may also clone this repository then push it your personal github. It will also need to be connected to your personal github. 
+
+To trigger a build, you can do a `git commit`. 
 If there are no changes to commit, you may use the command:
 
 ` git commit --allow-empty -m "Trigger CircleCI testing"`
