@@ -4,7 +4,7 @@
 - [x] You are responsible for generating a public/private RSA or ECDSA keypair and persisting the keypair on the filesystem
 - [x] Subsequent invocations of your application should read from the same files
 - [x] Document your code, at a minimum defining parameter types and return values for any public methods
-- [x] Include Unit Test(s) with instructions on how a Continuous Integration system can execute your test(s)
+- [ ] Include Unit Test(s) with instructions on how a Continuous Integration system can execute your test(s)
 - [x] You may only use first order libraries, you may not use any third party libraries or packages
 
 
