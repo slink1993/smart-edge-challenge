@@ -9,7 +9,7 @@ import (
 func TestWriteToFile(t *testing.T) {
 	filename := "testfile.txt"
 	contents := "this is a test"
-	codechal.WriteToFile(filename, contents)
+	codechal.WriteToFile(filename, contents, "")
 	if _, err := os.Stat("testfile.txt"); err != nil {
 		t.Errorf("File was not created")
 	}
@@ -19,7 +19,7 @@ func TestWriteToFile(t *testing.T) {
 func TestReadFile(t *testing.T) {
 	filename := "testfile.txt"
 	contents := "this is a test"
-	result := codechal.ReadFile(filename)
+	result := codechal.ReadFile(filename, "")
 
 	if result != contents {
 		t.Errorf("Contents didn't match")
@@ -45,7 +45,7 @@ func TestIsValidInputLength(t *testing.T) {
 func TestGenerateNewKeys(t *testing.T) {
 	input := "your@email.com"
 
-	codechal.GenerateNewKeys(input)
+	codechal.GenerateNewKeys(input, "")
 
 	if _, err := os.Stat("your@email.com_signature.txt"); err != nil {
 		t.Errorf("File was not created")

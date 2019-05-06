@@ -1,4 +1,6 @@
 # Smart Edge Code Challenge
+[![CircleCI](https://circleci.com/gh/stephenlink1993/smart-edge-challenge.svg?style=svg)](https://circleci.com/gh/stephenlink1993/smart-edge-challenge)
+
 ## Meets the following requirements:
 - [x] Given a string input of up to 250 characters, return a JSON response compliant to the schema defined below.
 - [x] You are responsible for generating a public/private RSA or ECDSA keypair and persisting the keypair on the filesystem
@@ -10,10 +12,16 @@
 
 ## Testing:
 
+### Locally:
+
 `docker build -f test/Dockerfile . -t test`
+
+### CI/CD (CircleCI):
+
+Connect this repository to your personal CircleCI account, then `git push`. That's it!
 
 ## To run the app:
 
 1. `docker build . -t codechal`
-2. `docker run codechal`
+2. `docker run codechal your@email.com`
 
