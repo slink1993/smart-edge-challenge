@@ -8,4 +8,4 @@ COPY . ./
 
 WORKDIR ${GOPATH}/src/codechal/test
 
-ENTRYPOINT ["go", "test"]
+ENTRYPOINT ["go", "test", "-v"]

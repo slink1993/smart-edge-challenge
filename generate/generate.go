@@ -89,7 +89,7 @@ func PrettyPrintJSON(input, signature, pubkey string) {
 	}
 	output, err := json.MarshalIndent(values, "", "  ")
 	checkError(err)
-	log.Println(string(output))
+	fmt.Println(string(output))
 }
 
 // Checks if the length of the user input is 250 characters or less.

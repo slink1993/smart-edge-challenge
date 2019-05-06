@@ -28,7 +28,7 @@ func TestReadFile(t *testing.T) {
 }
 
 func TestIsValidInputLength(t *testing.T) {
-	input := "your@email.com"
+	input := "test@email.com"
 
 	if codechal.IsValidInputLength(input) != true {
 		t.Errorf("Input is longer than 250 characters")
@@ -43,19 +43,19 @@ func TestIsValidInputLength(t *testing.T) {
 }
 
 func TestGenerateNewKeys(t *testing.T) {
-	input := "your@email.com"
+	input := "test@email.com"
 
 	codechal.GenerateNewKeys(input, "")
 
-	if _, err := os.Stat("your@email.com_signature.txt"); err != nil {
+	if _, err := os.Stat("test@email.com_signature.txt"); err != nil {
 		t.Errorf("File was not created")
 	}
 
-	if _, err := os.Stat("your@email.com_public.pem"); err != nil {
+	if _, err := os.Stat("test@email.com_public.pem"); err != nil {
 		t.Errorf("File was not created")
 	}
 
-	if _, err := os.Stat("your@email.com_private.pem"); err != nil {
+	if _, err := os.Stat("test@email.com_private.pem"); err != nil {
 		t.Errorf("File was not created")
 	}
 
